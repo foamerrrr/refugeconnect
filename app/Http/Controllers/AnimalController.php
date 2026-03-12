@@ -8,15 +8,13 @@ class AnimalController extends Controller
 {
     public function create()
     {
-        if (! Animal::where('name', 'Coquillette')->exists()) {
-            Animal::create([
-                'name' => 'Coquillette',
-                'species' => 'Chien',
-                'age' => 3,
-                'description' => "Une Shiba Inu vive et joyeuse, toujours prête à jouer et à explorer. Coquillette est curieuse, intelligente et très expressive, avec un petit caractère indépendant mais plein de tendresse pour ceux qu’elle aime.",
-                'photo' => 'images/animaux/coquillette.png',
-            ]);
-        }
+        Animal::create([
+            'name' => 'Coquillette',
+            'species' => 'Chien',
+            'age' => 3,
+            'description' => "Une Shiba Inu vive et joyeuse, toujours prête à jouer et à explorer. Coquillette est curieuse, intelligente et très expressive, avec un petit caractère indépendant mais plein de tendresse pour ceux qu’elle aime.",
+            'photo' => 'images/animaux/coquillette.png',
+        ]);
 
         return redirect()->route('home');
     }

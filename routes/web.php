@@ -4,19 +4,22 @@ use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/', [IndexController::class, 'index'])->name('acceuil');
 
-Route::get('/animal/create', [AnimalController::class, 'create'])->name('animal.create');
+Route::prefix('animal')->group(function () {
+    
+    Route::get('/create', [AnimalController::class, 'create'])->name('animal.creer');
 
-Route::get('/animal/{id}', [AnimalController::class, 'show'])
-    ->whereNumber('id')
-    ->name('animal.show');
+    Route::get('/{id}', [AnimalController::class, 'show'])
+        ->whereNumber('id')
+        ->name('animal.info');
 
-Route::get('/animal/{id}/edit', [AnimalController::class, 'edit'])->name('animal.edit');
+    Route::get('/{id}/edit', [AnimalController::class, 'edit'])->name('animal.editer');
 
-Route::get('/animal/{id}/delete', [AnimalController::class, 'delete'])->name('animal.delete');
+    Route::get('/{id}/delete', [AnimalController::class, 'delete'])->name('animal.supprimer');
+
+});
 
 Route::fallback(function () {
     return view('errors.404');
 });
-

@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->string('species');
             $table->integer('age');
             $table->text('description');
-            $table->string('photo')->nullable();
+            $table->string('photo');
             $table->timestamps();
         });
     }

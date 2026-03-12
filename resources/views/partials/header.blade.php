@@ -1,5 +1,5 @@
 <header class="header-bar">
-    <div class="header-inner">
+    <div>
         <div>
             <img src="{{ asset('images/logo.png') }}" alt="Refuge Connect" style="height: 40px;">
         </div>
