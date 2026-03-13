@@ -7,8 +7,8 @@
     <p>Âge : {{ $animal->age }} ans</p>
     <p>{{ $animal->description }}</p>
     <div class="animal-card-actions">
-        <a class="btn" href="{{ route('animal.editer', $animal->id) }}">Modifier</a>
-        <a class="btn" href="{{ route('animal.supprimer', $animal->id) }}">Supprimer</a>
+        <a class="btn" href="{{ route('animal.edit', $animal->id) }}">Modifier</a>
+        <a class="btn" href="{{ route('animal.delete', $animal->id) }}">Supprimer</a>
     </div>
 </div>
 

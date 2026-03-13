@@ -5,10 +5,19 @@
 
     <div class="animal-show">
         <img class="animal-show-image" src="{{ asset($animal->photo) }}" alt="Photo de {{ $animal->name }}">
-        <div>
-            <p>Espèce : {{ $animal->species }}</p>
-            <p>Age : {{ $animal->age }} ans</p>
-            <p>{{ $animal->description }}</p>
+        <div class="animal-show-details">
+            <p class="animal-show-line">
+                <span class="animal-show-label">Espèce :</span><br>
+                <span class="animal-show-value">{{ $animal->species }}</span>
+            </p>
+            <p class="animal-show-line">
+                <span class="animal-show-label">Âge :</span><br>
+                <span class="animal-show-value">{{ $animal->age }} ans</span>
+            </p>
+            <p class="animal-show-line">
+                <span class="animal-show-label">Description :</span><br>
+                <span class="animal-show-value">{{ $animal->description }}</span>
+            </p>
         </div>
     </div>
 @endsection

@@ -27,6 +27,9 @@ header, footer {
     padding: 1rem;
     text-align: center;
 }
+footer {
+    background-color: white;
+}
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -52,7 +55,7 @@ main {
     background: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    padding: 0.8rem 0.8rem 0.6rem;
+    padding: 0.4rem 0.4rem 0.6rem;
     width: calc(33% - 1rem);
     box-sizing: border-box;
     text-align: start;
@@ -62,31 +65,30 @@ main {
 }
 .animal-card-name {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 32px;
 }
 .animal-card img {
     max-width: 100%;
     height: auto;
     display: block;
     margin-bottom: 0.75rem;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 12px 12px !important;
 }
 .header-bar {
     background-color: #f5f8fa;
     padding: 1rem 2rem;
     text-align: initial;
 }
-
-.header-bar > div {
-    max-width: 900px;
-    margin: 0 auto;
+.header-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
     gap: 1.5rem;
 }
-
-.header-bar img {
+.header-logo {
+    height: 40px;
     display: block;
 }
 
@@ -99,6 +101,10 @@ main {
     font-size: 16px;
     white-space: nowrap;
 }
+.header-nav a,
+.header-btn {
+    color: black !important;
+}
 .animal-show {
     display: flex;
     gap: 2rem;
@@ -109,7 +115,24 @@ main {
     border-radius: 12px;
     object-fit: cover;
 }
+.animal-show-details {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.animal-show-line {
+    margin-bottom: 1rem;
+}
+.animal-show-label {
+    font-weight: 600;
+}
+.animal-show-value {
+    display: inline-block;
+    margin-top: 0.25rem;
+}
 .animal-card-actions {
     margin-top: auto;
+    text-align: center;
+}
+.text-center {
     text-align: center;
 }
