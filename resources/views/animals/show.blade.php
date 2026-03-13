@@ -7,16 +7,13 @@
         <img class="animal-show-image" src="{{ asset($animal->photo) }}" alt="Photo de {{ $animal->name }}">
         <div class="animal-show-details">
             <p class="animal-show-line">
-                <span class="animal-show-label">Espèce :</span><br>
-                <span class="animal-show-value">{{ $animal->species }}</span>
+               Espèce : {{ $animal->species }}
             </p>
             <p class="animal-show-line">
-                <span class="animal-show-label">Âge :</span><br>
-                <span class="animal-show-value">{{ $animal->age }} ans</span>
+               Âge : {{ $animal->age }} ans
             </p>
             <p class="animal-show-line">
-                <span class="animal-show-label">Description :</span><br>
-                <span class="animal-show-value">{{ $animal->description }}</span>
+                Description : {{ $animal->description }}
             </p>
         </div>
     </div>

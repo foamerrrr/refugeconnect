@@ -8,15 +8,15 @@ Route::get('/', [IndexController::class, 'index'])->name('home');
 
 Route::prefix('animal')->group(function () {
     
-    Route::get('/create', [AnimalController::class, 'create'])->name('animal.create');
+    Route::get('/creer', [AnimalController::class, 'create'])->name('animal.create');
 
     Route::get('/{id}', [AnimalController::class, 'show'])
         ->whereNumber('id')
         ->name('animal.show');
 
-    Route::get('/{id}/edit', [AnimalController::class, 'edit'])->name('animal.edit');
+    Route::get('/{id}/editer', [AnimalController::class, 'edit'])->name('animal.edit');
 
-    Route::get('/{id}/delete', [AnimalController::class, 'delete'])->name('animal.delete');
+    Route::get('/{id}/supprimer', [AnimalController::class, 'delete'])->name('animal.delete');
 
 });
 
