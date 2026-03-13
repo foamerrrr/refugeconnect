@@ -12,7 +12,7 @@ Route::prefix('animal')->group(function () {
 
     Route::get('/{id}', [AnimalController::class, 'show'])
         ->whereNumber('id')
-        ->name('animal.info');
+        ->name('animal.show');
 
     Route::get('/{id}/edit', [AnimalController::class, 'edit'])->name('animal.editer');
 

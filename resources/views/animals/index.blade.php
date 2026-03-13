@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2 class="page-title">Nos animaux</h2>
+    <h1 class="page-title">Nos animaux</h1>
 
     <div class="animal-list">
         @foreach ($animals as $animal)
